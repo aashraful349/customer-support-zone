@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
     return (
@@ -15,7 +17,7 @@ const Navbar = () => {
                         <li><a>Blog</a></li>
                         <li><a>Download</a></li>
                         <li><a>Contact</a></li>
-                        <li><button className='text-white font-semibold bg-gradient-to-r from-[#632EE3] to-[#9F62F2]'>New Ticket</button></li>
+                        <li><button className='text-white font-semibold bg-gradient-to-r from-[#632EE3] to-[#9F62F2]'><FontAwesomeIcon icon={faPlus} /> New Ticket</button></li>
                         
                     </ul>
                 </div>

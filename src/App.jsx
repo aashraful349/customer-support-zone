@@ -6,6 +6,7 @@ import Tickets from './Components/Tickets/Tickets'
 import Task from './Components/Task/Task'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Footer from './Components/Footer/Footer'
 
 const fetchTicket = async () => {
   const res = await fetch('/tickets.json')
@@ -32,7 +33,8 @@ function App() {
 
   return (
     <>
-      <ToastContainer position="top-right" autoClose={3000} />
+      <div className="max-w-[100rem] mx-auto">
+        <ToastContainer position="top-right" autoClose={3000} />
       <Navbar></Navbar>
       <Banner inProgressCount={inProgress.length} resolvedCount={resolved.length}></Banner>
       <div className="flex flex-col lg:flex-row md:flex-row">
@@ -41,6 +43,8 @@ function App() {
         </Suspense>
         <Task inProgress={inProgress} resolved={resolved} onCompleteTask={handleCompleteTask}></Task>
       </div>
+      </div>
+      <Footer></Footer>
 
     </>
   )

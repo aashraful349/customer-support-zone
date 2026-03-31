@@ -10,9 +10,9 @@ const TicketCard = ({ ticket, onAddToTask }) => {
     }
 
     return (
-        <div 
+        <div
             onClick={handleCardClick}
-            className="bg-white border-1 shadow-xl border-gray-100 rounded-xl p-2 mx-4 max-w-[32rem] mt-2 cursor-pointer hover:shadow-2xl transition-shadow"
+            className="bg-white border-1 shadow-xl border-gray-100 rounded-xl p-2 max-w-[32rem] mt-2 cursor-pointer hover:shadow-4xl transition-shadow"
         >
             <div className="flex justify-between">
                 <h2 className='font-bold'>{ticket.title}</h2>
